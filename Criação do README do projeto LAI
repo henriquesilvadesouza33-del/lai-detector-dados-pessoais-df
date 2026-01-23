@@ -1,0 +1,125 @@
+# Detector Automático de Dados Pessoais em Pedidos LAI – DF
+
+## Sumário
+1. [Contexto](#1-contexto)  
+2. [Problema](#2-problema)  
+3. [Objetivo da Solução](#3-objetivo-da-solução)  
+4. [Descrição da Solução](#4-descrição-da-solução)  
+5. [Tipos de Dados Identificados](#5-tipos-de-dados-identificados)  
+6. [Tecnologias Utilizadas](#6-tecnologias-utilizadas)  
+7. [Estrutura do Projeto](#7-estrutura-do-projeto)  
+8. [Instalação](#8-instalação)  
+9. [Execução](#9-execução)  
+10. [Entrada e Saída](#10-entrada-e-saída)  
+11. [Demonstração em Vídeo](#11-demonstração-em-vídeo)  
+12. [Considerações Finais](#12-considerações-finais)
+
+---
+
+## 1. Contexto
+A Lei de Acesso à Informação (LAI) garante o direito do cidadão ao acesso a informações públicas. Entretanto, pedidos classificados como públicos podem conter dados pessoais, o que viola a Lei Geral de Proteção de Dados (LGPD).
+
+A triagem manual desses pedidos é suscetível a erros, demanda tempo e pode resultar em exposição indevida de informações sensíveis.
+
+## 2. Problema
+Atualmente, não há um mecanismo automatizado eficaz que identifique, entre os pedidos de acesso à informação marcados como públicos, aqueles que contêm dados pessoais e que deveriam ser reclassificados como não públicos.
+
+## 3. Objetivo da Solução
+Desenvolver um modelo automatizado capaz de identificar pedidos de acesso à informação que contenham dados pessoais, auxiliando a Administração Pública na proteção de dados e no cumprimento da LGPD.
+
+## 4. Descrição da Solução
+A solução utiliza uma abordagem híbrida, combinando:
+- Regras baseadas em expressões regulares (regex) para identificação direta de dados sensíveis;
+- Técnicas de Processamento de Linguagem Natural (PLN) para análise contextual do texto.
+
+O modelo classifica automaticamente os pedidos como:
+- **Contém dados pessoais**
+- **Não contém dados pessoais**
+
+## 5. Tipos de Dados Identificados
+- CPF  
+- RG  
+- Telefone  
+- Endereço de e-mail  
+- Endereço residencial  
+- Nome próprio (análise contextual)
+
+## 6. Tecnologias Utilizadas
+- Python 3.10+  
+- pandas  
+- scikit-learn  
+- spaCy  
+- re (regex)
+
+## 7. Estrutura do Projeto
+```text
+├── data/
+│   └── sample.csv
+├── src/
+│   ├── preprocess.py
+│   ├── model.py
+│   └── predict.py
+├── main.py
+├── requirements.txt
+└── README.md
+```
+
+## 8. Instalação
+
+### 1. Criar o ambiente virtual
+```bash
+python -m venv venv
+
+```
+
+### 2. Ativar o ambiente virtual
+
+Windows
+```bash
+venv\Scripts\activate
+```
+Linux / Mac
+```bash
+source venv/bin/activate
+```
+
+### 3. Instalar as dependências
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 9. Execução
+Para rodar o programa:
+
+python main.py
+10. Entrada e Saída
+Entrada:
+Arquivo CSV contendo pedidos de acesso à informação.
+
+Saída:
+Classificação indicando se o pedido contém ou não dados pessoais.
+
+Dica: verifique se os dados de entrada estão no formato correto para garantir o funcionamento adequado do modelo.
+
+## 11. Demonstração em Vídeo
+Link do vídeo de demonstração:
+(será inserido após a gravação)
+
+## 12. Considerações Finais
+A solução contribui para:
+
+Proteção de dados pessoais;
+
+Redução de riscos legais;
+
+Aumento da eficiência na análise dos pedidos LAI;
+
+Integração simples aos fluxos existentes da Administração Pública.
+
+Autor: Henrique Silva de Souza
+Categoria: Acesso à Informação – Desafio Participa DF
+
+
+---
