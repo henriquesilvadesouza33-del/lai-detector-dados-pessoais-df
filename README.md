@@ -103,7 +103,7 @@ def main():
     df['confianca'] = [r[1] for r in resultados]
     df.to_csv(args.output, index=False)
     
-    print("✅ Detecção concluída!")
+    print(" Detecção concluída!")
     print(df[['id', 'contem_dados_pessoais', 'confianca']])
 
 if __name__ == "__main__":
