@@ -1,3 +1,5 @@
+
+
 **No GitHub → lai-detector-dados-pessoais-df → "Add file" → "Create new file"**
 Nome: `requirements.txt`
 Conteúdo:
