@@ -20,6 +20,7 @@ padrao_rg = r'\b\d{2}\.\d{3}\.\d{3}-\d\b'
 padrao_telefone = r'\b\(?\d{2}\)?\s?\d{4,5}-\d{4}\b'
 padrao_email = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
 
+
 df = pd.DataFrame(dados)
 df['contem_dados_pessoais'] = df['texto'].apply(lambda x: 
     bool(re.search(padrao_cpf, x)) or 
