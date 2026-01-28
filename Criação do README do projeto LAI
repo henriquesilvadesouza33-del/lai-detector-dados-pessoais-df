@@ -90,10 +90,10 @@ pip install -r requirements.txt
 
 ---
 
-## 9. Execução
-Para rodar o programa:
+## 9. Execução (corrigir)
+```bash
+python main.py --input data/sample.csv --output predictions.csv
 
-python main.py
 10. Entrada e Saída
 Entrada:
 Arquivo CSV contendo pedidos de acesso à informação.
