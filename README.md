@@ -1,4 +1,4 @@
-
+https://youtu.be/IG0P90K1e0E
 
 **No GitHub → lai-detector-dados-pessoais-df → "Add file" → "Create new file"**
 Nome: `requirements.txt`
